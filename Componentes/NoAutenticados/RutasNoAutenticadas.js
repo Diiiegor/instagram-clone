@@ -5,7 +5,7 @@ import {StackNavigator,createStackNavigator} from 'react-navigation';
 const SignIn = (props) => {
     const {navigation}=props;
    return  (
-    <View>
+    <View style={{flex:1,justifyContent: 'center'}}>
         <Text>Este es el componente para logearse</Text>
         <Button
             title="Ir a SignUp"
@@ -17,7 +17,7 @@ const SignIn = (props) => {
 const SignUp = (props) => {
     const {navigation}=props;
     return (
-        <View>
+        <View style={{flex:1,justifyContent: 'center'}}>
             <Text>Componente SignUp</Text>
             <Button
                 title="Regresar a SignIn"
@@ -27,12 +27,17 @@ const SignUp = (props) => {
     )
 };
 
-const RutasNoAutenticadas=createStackNavigator({
-    SignIn:{
-        screen:SignIn
+const RutasNoAutenticadas=createStackNavigator(
+    {
+        SignIn:{
+            screen:SignIn,
+        },
+        SignUp:{
+            screen:SignUp,
+        }
     },
-    SignUp:{
-        screen:SignUp
+    {
+        headerMode:'none'
     }
-});
+);
 export {RutasNoAutenticadas};
