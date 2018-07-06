@@ -10,6 +10,7 @@ class Publicacion extends React.Component {
             <View style={styles.container}>
                 <Text>Publicacion</Text>
                 <Button title="Comentarios" onPress={()=>{navigation.navigate('Comentarios')}}/>
+                <Button title="Autor" onPress={()=>{navigation.navigate('Autor')}}/>
             </View>
         );
     }
