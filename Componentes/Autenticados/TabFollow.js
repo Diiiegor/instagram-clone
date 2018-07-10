@@ -10,11 +10,6 @@ const TabFollow=TabNavigator(
             screen: Follow
         }
     },
-    {
-        navigationOptions:{
-            header:null
-        }
-    }
 );
 
 export {TabFollow};
