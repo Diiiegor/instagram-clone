@@ -1,12 +1,11 @@
 import React from 'react';
 import {StyleSheet, Text, View,TextInput,Button} from 'react-native';
-import {Field,reduxForm} from 'redux-form';
-import {autenticacion} from "../../../Store/Servicios/Firebase";
+import {Field,reduxForm} from 'redux-form'
 
 
 //INPUT COMPONENT USADO EN EL FORMULARIO
 const fieldNombre=(props)=>{
-    console.log('inputs');
+    console.log(props);
     return(
         <View style={styles.textInput}>
             <TextInput
@@ -26,18 +25,6 @@ const fieldNombre=(props)=>{
 //VALIDACIONES
 const validate=(values)=>{
     const errors={};
-
-    //validamos el nombre
-    if (!values.nombre){
-        errors.nombre='requerido';
-    }
-    else if(values.nombre.length<5){
-        errors.nombre='deben ser almenos 5 caracteres';
-    }
-    else if(values.nombre.length>10){
-        errors.nombre='debe ser menor a 10 caracteres'
-    }
-
     //validamos el correo
     if(!values.correo){
         errors.correo='requerido'
@@ -57,43 +44,18 @@ const validate=(values)=>{
         errors.password='debe ser menor a 15 caracteres';
     }
 
-    //valiamos confirmacion de pass
-    if(!values.confirmacion){
-        errors.confirmacion='requerido';
-    }
-    else if(values.password!==values.confirmacion){
-        errors.confirmacion='el password debe coincidir';
-    }
-
     return errors;
 };
 
 //FORMULARIO
-const SignUpForm =(props)=>{
-    console.log('signUform');
+const SignInForm =(props)=>{
     return(
         <View>
-            <Field name="nombre" component={fieldNombre} ph="Nombre"/>
             <Field name="correo" component={fieldNombre} ph="correo@correo.com"/>
             <Field name="password" component={fieldNombre} ph={"***"}/>
-            <Field name="confirmacion" component={fieldNombre} ph={"***"}/>
             <Button
-                title="Registrar"
-                onPress={props.handleSubmit((values)=>{
-                    console.log(values);
-                    autenticacion.createUserWithEmailAndPassword(values.correo,values.password)
-                        .then((success)=>{
-                            console.log(success)
-                        })
-                        .catch((error)=>{
-                            const errorCode = error.code;
-                            const errorMessage = error.message;
-
-                            console.log(errorCode)
-                            console.log(errorMessage)
-                        })
-
-                })}/>
+                title="SignIn"
+                onPress={props.handleSubmit((values)=>{console.log(values)})}/>
         </View>
     );
 };
@@ -107,4 +69,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default reduxForm({form:'SignUpForm',validate})(SignUpForm);
+export default reduxForm({form:'SignInForm',validate})(SignInForm);
