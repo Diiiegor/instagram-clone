@@ -2,14 +2,20 @@ import React from 'react';
 import {StyleSheet, Text, View,Button,TextInput} from 'react-native';
 import {connect} from 'react-redux';
 import SignUpForm from './Formas/SignUpForm';
+import {actionRegistro} from '../../Store/ACCIONES';
+import SeleccionarImagen from '../SeleccionarImagen';
 
 //export default
 class SignUp extends React.Component {
+    registroDeUsuario=(values)=>{
+        this.props.registro(values)
+    };
     render() {
         const {navigation}=this.props;
         return (
             <View style={styles.container}>
-                <SignUpForm/>
+                <SeleccionarImagen/>
+                <SignUpForm registro={this.registroDeUsuario}/>
                 <Button title="SignIn" onPress={()=>{navigation.goBack()}}/>
             </View>
         );
@@ -31,9 +37,9 @@ const mapStateToProps=(state)=>{
     }
 };
 
-mapDispatchToProps=dispatch=>({
-    aumentar:()=>{
-        dispatch({type:'AUMENTAR_REDUCER_PRUEBA'})
+const mapDispatchToProps=dispatch=>({
+    registro:(values)=>{
+        dispatch(actionRegistro(values))
     }
 });
 

@@ -5,7 +5,6 @@ import {Field,reduxForm} from 'redux-form'
 
 //INPUT COMPONENT USADO EN EL FORMULARIO
 const fieldNombre=(props)=>{
-    console.log(props);
     return(
         <View style={styles.textInput}>
             <TextInput
@@ -55,7 +54,7 @@ const SignInForm =(props)=>{
             <Field name="password" component={fieldNombre} ph={"***"}/>
             <Button
                 title="SignIn"
-                onPress={props.handleSubmit((values)=>{console.log(values)})}/>
+                onPress={props.handleSubmit(props.login)}/>
         </View>
     );
 };

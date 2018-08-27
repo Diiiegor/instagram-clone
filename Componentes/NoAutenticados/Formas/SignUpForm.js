@@ -6,7 +6,6 @@ import {autenticacion} from "../../../Store/Servicios/Firebase";
 
 //INPUT COMPONENT USADO EN EL FORMULARIO
 const fieldNombre=(props)=>{
-    console.log('inputs');
     return(
         <View style={styles.textInput}>
             <TextInput
@@ -70,35 +69,23 @@ const validate=(values)=>{
 
 //FORMULARIO
 const SignUpForm =(props)=>{
-    console.log('signUform');
     return(
-        <View>
+        <View style={styles.container}>
             <Field name="nombre" component={fieldNombre} ph="Nombre"/>
             <Field name="correo" component={fieldNombre} ph="correo@correo.com"/>
             <Field name="password" component={fieldNombre} ph={"***"}/>
             <Field name="confirmacion" component={fieldNombre} ph={"***"}/>
             <Button
                 title="Registrar"
-                onPress={props.handleSubmit((values)=>{
-                    console.log(values);
-                    autenticacion.createUserWithEmailAndPassword(values.correo,values.password)
-                        .then((success)=>{
-                            console.log(success)
-                        })
-                        .catch((error)=>{
-                            const errorCode = error.code;
-                            const errorMessage = error.message;
-
-                            console.log(errorCode)
-                            console.log(errorMessage)
-                        })
-
-                })}/>
+                onPress={props.handleSubmit(props.registro)}/>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
+    container:{
+        flex:3
+    },
     textInput: {
         marginBottom: 16
     },
