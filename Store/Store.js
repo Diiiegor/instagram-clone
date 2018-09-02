@@ -24,13 +24,27 @@ const reducerSesion=(state=null,action)=>{
     }
 };
 
+const reducerImagenSignUp=(state={imagen:null},action)=>{
+    switch (action.type) {
+        case CONSTANTES.CARGAR_IMAGEN_SIGNUP:
+            return {imagen:action.imagen};
+
+        case CONSTANTES.LIMPIAR_IMAGEN_SIGNUP:
+            return {imagen:null};
+
+        default :
+                return state;
+    }
+};
+
 
 const sagaMiddleware=createSagaMiddleware();
 
 const reducers=combineReducers({
     reducerPrueba,
     reducerSesion,
-    form
+    form,
+    reducerImagenSignUp
 });
 const store=createStore(reducers,applyMiddleware(sagaMiddleware));
 
