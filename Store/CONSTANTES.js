@@ -5,5 +5,7 @@ const CONSTANTES = {
     CERRAR_SESION:'CERRAR_SESION',
     LIMPIAR_IMAGEN_SIGNUP:'LIMPIAR_IMAGEN_SIGNUP',
     CARGAR_IMAGEN_SIGNUP:'CARGAR_IMAGEN_SIGNUP',
+    CLOUDINARY_NAME:'https://api.cloudinary.com/v1_1/dzxmrgbiy/image/upload',
+    CLOUDINARY_PRESET:'qtp56zha'
 };
 export default CONSTANTES;
