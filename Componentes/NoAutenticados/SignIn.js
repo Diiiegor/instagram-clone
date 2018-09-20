@@ -7,13 +7,12 @@ import SignInForm from './Formas/SignInForm';
 //export default
 class SignIn extends React.Component {
     signinDeUsiario=(values)=>{
-        this.props.login(values)
     };
     render() {
         const {navigation}=this.props;
         return (
             <View style={styles.container}>
-                <SignInForm login={this.signinDeUsiario} />
+                <SignInForm login={this.props.login} />
                 <Button title="SignUp" onPress={()=>{navigation.navigate('SignUp')}}/>
             </View>
         );

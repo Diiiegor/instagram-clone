@@ -10,20 +10,18 @@ const SeleccionarImagen = (props) => {
             aspect: [4, 3],
         });
 
-        console.log(result);
-
         if (!result.cancelled) {
             props.cargar(result)
         }
     };
-
+    const radius={borderRadius: props.radius?0:80 };
     return (
         <View style={{flex: 2, alignItems: 'center', justifyContent: 'center'}}>
             <TouchableOpacity onPress={seleccionarImagen}>
                 {
                     props.imagen ?
-                        <Image source={{uri: props.imagen.uri}} style={styles.imagen}/> :
-                        <Image source={require('../assets/imagen_defecto.jpg')} style={styles.imagen}/>
+                        <Image source={{uri: props.imagen.uri}} style={{ width: 160,height:160,...radius }}/> :
+                        <Image source={require('../assets/imagen_defecto.jpg')} style={{ width: 160,height:160,...radius }}/>
                 }
             </TouchableOpacity>
         </View>
@@ -31,11 +29,3 @@ const SeleccionarImagen = (props) => {
 };
 
 export default SeleccionarImagen
-
-const styles = StyleSheet.create({
-    imagen: {
-        width: 160,
-        height: 160,
-        borderRadius: 80
-    },
-});

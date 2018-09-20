@@ -18,4 +18,15 @@ export const actionCargarImagenSignUp = (imagen) => ({
 });
 export const actionLimpiarImagenSignUp=()=>({
     type:CONSTANTES.LIMPIAR_IMAGEN_SIGNUP
-})
+});
+export const actionCargarImagenPublicacion = (imagen) => ({
+    type: CONSTANTES.CARGAR_IMAGEN_PUBLICACION,
+    imagen
+});
+export const actionLimpiarImagenPublicacion=()=>({
+    type:CONSTANTES.LIMPIAR_IMAGEN_PUBLICACION
+});
+export const actionSubirPublicacion=(values)=>({
+    type:CONSTANTES.SUBIR_PUBLICACION,
+    values
+});

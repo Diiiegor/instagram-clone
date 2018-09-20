@@ -1,11 +1,10 @@
 import React from 'react';
-import {StyleSheet, Text, View, Button, TextInput} from 'react-native';
+import {StyleSheet, View, Button} from 'react-native';
 import {connect} from 'react-redux';
-import {blur,change} from 'redux-form';
+import {blur} from 'redux-form';
 import SignUpForm from './Formas/SignUpForm';
 import {actionCargarImagenSignUp, actionRegistro,actionLimpiarImagenSignUp} from '../../Store/ACCIONES';
 import SeleccionarImagen from '../SeleccionarImagen';
-import CONSTANTES from "../../Store/CONSTANTES";
 
 //export default
 class SignUp extends React.Component {

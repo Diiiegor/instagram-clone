@@ -37,11 +37,9 @@ const mapDispatchToProps = dispatch => {
         autenticacion: () => {
             autenticacion.onAuthStateChanged((usuario) => {
                 if (usuario) {
-                    console.log(usuario.toJSON());
                     dispatch(actionEstablecerSesion(usuario))
                 }
                 else {
-                    console.log('sin sesion');
                     dispatch(actionCerrarSesion())
                 }
             });

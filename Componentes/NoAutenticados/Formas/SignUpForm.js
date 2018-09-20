@@ -31,7 +31,6 @@ const fieldImagen = props =>
 
 //VALIDACIONES
 const validate = (values,props) => {
-    console.log('ejecutando validacion');
     const errors = {};
 
     //validamos la imagen
