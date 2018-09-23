@@ -1,6 +1,7 @@
-import {takeEvery, call, select} from 'redux-saga/effects';
+import {takeEvery, call, select,put} from 'redux-saga/effects';
 import CONSTANTES from "../CONSTANTES";
 import {autenticacion, baseDeDatos} from '../Servicios/Firebase';
+import {actionAgregarPublicacionesStore} from "../ACCIONES";
 
 const registroEnFirebase = (values) =>
     autenticacion.createUserWithEmailAndPassword(values.correo, values.password)
@@ -68,31 +69,67 @@ function* sagaLogin(values) {
 const loginEnFirebase = ({correo, password}) => autenticacion.signInWithEmailAndPassword(correo, password)
     .then((success) => success);
 
-const escribirFirebase = ({width, height, secure_url},texto="") => baseDeDatos
+const escribirFirebase = ({width, height, secure_url, uid}, texto = "") => baseDeDatos
     .ref('publicaciones/')
     .push({
         width,
         height,
         secure_url,
-        texto
+        texto,
+        uid
     })
-    .then(response=>response);
+    .then(response => response);
+
+const escribirAutorPublicaciones = ({uid, key}) => baseDeDatos.ref(`autor-publicaciones/${uid}`)
+    .update({[key]: true})
+    .then(response => response);
 
 function* sagaSubirPublicacion({values}) {
     try {
         const imagen = yield select(state => state.reducerImagenPublicacion);
+        const usuario = yield select(state => state.reducerSesion);
+        const {uid} = usuario;
         const resultadoImagen = yield call(registroFotoEnCloudinary, imagen);
         const {width, height, secure_url} = resultadoImagen;
-        const parametrosImagen = {width, height, secure_url};
-        const escribirEnFirebase = yield call(escribirFirebase, parametrosImagen,values.texto);
+        const parametrosImagen = {width, height, secure_url, uid};
+        const escribirEnFirebase = yield call(escribirFirebase, parametrosImagen, values.texto);
+        const {key} = escribirEnFirebase;
+        const parametrosAutorPublicaciones = {key, uid}
+        const resultadoEscribirAutorPublicaciones = yield call(escribirAutorPublicaciones, parametrosAutorPublicaciones);
     }
     catch (e) {
         console.log(e, 'sagaSubirPublicacion')
     }
 }
 
+const descargarPublicaciones = () => baseDeDatos
+    .ref(`publicaciones/`)
+    .once('value')
+    .then(snapshot => {
+        let publicaciones=[];
+            snapshot.forEach((childSnapshot) => {
+                const {key} = childSnapshot;
+                let publicacion = childSnapshot.val();
+                publicacion.key = key;
+                publicaciones.push(publicacion)
+            });
+        return publicaciones;
+        }
+    );
+
+function* sagaDescargarPublicaciones() {
+    try {
+        const publicaciones = yield call(descargarPublicaciones);
+        yield put(actionAgregarPublicacionesStore(publicaciones));
+    }
+    catch (e) {
+        console.log(e)
+    }
+}
+
 export default function* funcionPrimaria() {
     yield takeEvery(CONSTANTES.REGISTRO, sagaRegistro);
     yield takeEvery(CONSTANTES.LOGIN, sagaLogin);
-    yield takeEvery(CONSTANTES.SUBIR_PUBLICACION, sagaSubirPublicacion)
+    yield takeEvery(CONSTANTES.SUBIR_PUBLICACION, sagaSubirPublicacion);
+    yield takeEvery(CONSTANTES.DESCARGAR_PUBLICACIONES, sagaDescargarPublicaciones)
 }

@@ -2,7 +2,11 @@ import React from 'react';
 import {StyleSheet, Text, View, Button} from 'react-native';
 import SeleccionarImagen from "../SeleccionarImagen";
 import {connect} from 'react-redux';
-import {actionCargarImagenPublicacion, actionSubirPublicacion} from "../../Store/ACCIONES";
+import {
+    actionCargarImagenPublicacion,
+    actionLimpiarImagenPublicacion,
+    actionSubirPublicacion
+} from "../../Store/ACCIONES";
 import {blur} from 'redux-form';
 import SeleccionarGaleriaForm from "./SeleccionarGaleriaForm";
 
@@ -10,6 +14,9 @@ import SeleccionarGaleriaForm from "./SeleccionarGaleriaForm";
 class SeleccionarGaleria extends React.Component {
     static navigationOptions={
         tabBarVisible: false
+    };
+    componentWillUnmount(){
+        this.props.limpiarImagen();
     };
     render() {
         return (
@@ -52,6 +59,9 @@ const mapDispatchToProps = dispatch => ({
     },
     subirPublicacion:(values)=>{
         dispatch(actionSubirPublicacion(values))
+    },
+    limpiarImagen:()=>{
+        dispatch(actionLimpiarImagenPublicacion())
     }
 });
 

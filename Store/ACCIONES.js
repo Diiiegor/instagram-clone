@@ -30,3 +30,12 @@ export const actionSubirPublicacion=(values)=>({
     type:CONSTANTES.SUBIR_PUBLICACION,
     values
 });
+
+export const actionDescargarPublicaciones=()=>({
+    type:CONSTANTES.DESCARGAR_PUBLICACIONES
+});
+
+export const actionAgregarPublicacionesStore=(publicaciones)=>({
+    type:CONSTANTES.AGREGAR_PUBLICACIONES_STORE,
+    publicaciones
+});

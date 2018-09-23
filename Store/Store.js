@@ -50,9 +50,19 @@ const reducerImagenPublicacion=(state={imagen:null},action)=>{
     }
 };
 
+const reducerPublicacionesDescargadas=(state=[],action)=>{
+    switch (action.type) {
+        case CONSTANTES.AGREGAR_PUBLICACIONES_STORE:
+            return [...state,...action.publicaciones];
+        default:
+            return state;
+    }
+};
+
 const sagaMiddleware=createSagaMiddleware();
 
 const reducers=combineReducers({
+    reducerPublicacionesDescargadas,
     reducerImagenPublicacion,
     reducerPrueba,
     reducerSesion,
