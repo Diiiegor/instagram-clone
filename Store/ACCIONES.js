@@ -39,3 +39,7 @@ export const actionAgregarPublicacionesStore=(publicaciones)=>({
     type:CONSTANTES.AGREGAR_PUBLICACIONES_STORE,
     publicaciones
 });
+export const actionAgregarAutoresStore=(autores)=>({
+    type:CONSTANTES.AGREGAR_AUTORES_STORE,
+    autores
+});
