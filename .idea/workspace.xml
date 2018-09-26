@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbeb5403-9eb8-4a7c-9c39-b194e2b4ddef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Componentes/Autenticados/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/Autenticados/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Componentes/Autenticados/Publicacion.js" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/Autenticados/Publicacion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Componentes/Autenticados/SeleccionarGaleria.js" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes/Autenticados/SeleccionarGaleria.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/ACCIONES.js" beforeDir="false" afterPath="$PROJECT_DIR$/Store/ACCIONES.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/CONSTANTES.js" beforeDir="false" afterPath="$PROJECT_DIR$/Store/CONSTANTES.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/Sagas/Sagas.js" beforeDir="false" afterPath="$PROJECT_DIR$/Store/Sagas/Sagas.js" afterDir="false" />
@@ -22,7 +22,7 @@
     <session id="-250699040">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="42" />
+          <entry key="project.closed" value="43" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="2" />
@@ -38,7 +38,7 @@
           <entry key="project.open.time.34" value="2" />
           <entry key="project.open.time.35" value="2" />
           <entry key="project.open.time.36" value="1" />
-          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.37" value="2" />
           <entry key="project.open.time.38" value="2" />
           <entry key="project.open.time.41" value="2" />
           <entry key="project.open.time.42" value="1" />
@@ -53,23 +53,23 @@
           <entry key="project.open.time.70" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="43" />
+          <entry key="project.opened" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="13434" />
+          <entry key="js" value="14341" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="13434" />
+          <entry key="JavaScript" value="14341" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="jpg" value="1" />
-          <entry key="js" value="186" />
+          <entry key="js" value="192" />
           <entry key="json" value="4" />
           <entry key="ts" value="1" />
         </counts>
@@ -78,7 +78,7 @@
         <counts>
           <entry key="Image" value="1" />
           <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="186" />
+          <entry key="JavaScript" value="192" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
@@ -91,11 +91,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Componentes/Autenticados/Home.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Componentes/Autenticados/SeleccionarGaleria.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="21" column="42" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="42" />
+            <state relative-caret-position="277">
+              <caret line="42" column="67" lean-forward="true" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -103,13 +103,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Componentes/Autenticados/Publicacion.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Store/Sagas/Sagas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="46">
+              <caret line="102" column="72" selection-start-line="102" selection-start-column="72" selection-end-line="102" selection-end-column="72" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#67#0" expanded="true" />
+                <element signature="n#!!block;n#sagaRegistro#0" />
+                <element signature="n#!!block;n#sagaLogin#0" />
               </folding>
             </state>
           </provider>
@@ -118,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Store/ACCIONES.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="43" column="11" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="11" />
+            <state relative-caret-position="369">
+              <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -127,8 +129,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Store/CONSTANTES.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="25" />
+            <state relative-caret-position="391">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -136,23 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Store/Store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Store/Sagas/Sagas.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1310">
-              <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#63#0" expanded="true" />
-                <element signature="n#!!block;n#sagaRegistro#0" />
-                <element signature="n#!!block;n#sagaLogin#0" />
-                <element signature="n#!!block;n#sagaSubirPublicacion#0" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -179,11 +167,13 @@
       <find>SignUpForm</find>
       <find>toJSON</find>
       <find>json</find>
+      <find>limpiarPublicacion</find>
     </findStrings>
     <replaceStrings>
       <replace>SignInForm</replace>
       <replace>sagaRegistro</replace>
       <replace>SeleccionarGaleriaForm</replace>
+      <replace>limpiarEstadoPublicacion</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\IEO-DEVELOPER\Documents\PROYECTOS\instagram-clone\Componentes\NoAutenticados</dir>
@@ -217,13 +207,13 @@
         <option value="$PROJECT_DIR$/Componentes/SeleccionarImagen.js" />
         <option value="$PROJECT_DIR$/Componentes/NoAutenticados/SignIn.js" />
         <option value="$PROJECT_DIR$/Componentes/Autenticados/SeleccionarGaleriaForm.js" />
-        <option value="$PROJECT_DIR$/Componentes/Autenticados/SeleccionarGaleria.js" />
-        <option value="$PROJECT_DIR$/Store/ACCIONES.js" />
-        <option value="$PROJECT_DIR$/Store/CONSTANTES.js" />
-        <option value="$PROJECT_DIR$/Store/Store.js" />
-        <option value="$PROJECT_DIR$/Store/Sagas/Sagas.js" />
         <option value="$PROJECT_DIR$/Componentes/Autenticados/Home.js" />
         <option value="$PROJECT_DIR$/Componentes/Autenticados/Publicacion.js" />
+        <option value="$PROJECT_DIR$/Store/Sagas/Sagas.js" />
+        <option value="$PROJECT_DIR$/Store/CONSTANTES.js" />
+        <option value="$PROJECT_DIR$/Store/ACCIONES.js" />
+        <option value="$PROJECT_DIR$/Store/Store.js" />
+        <option value="$PROJECT_DIR$/Componentes/Autenticados/SeleccionarGaleria.js" />
       </list>
     </option>
   </component>
@@ -274,6 +264,12 @@
               <item name="instagram-clone" type="b2602c69:ProjectViewProjectNode" />
               <item name="instagram-clone" type="462c0819:PsiDirectoryNode" />
               <item name="Store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="instagram-clone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="instagram-clone" type="462c0819:PsiDirectoryNode" />
+              <item name="Store" type="462c0819:PsiDirectoryNode" />
+              <item name="Sagas" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -369,12 +365,13 @@
       <workItem from="1537316290021" duration="4072000" />
       <workItem from="1537413958693" duration="1169000" />
       <workItem from="1537576734035" duration="6050000" />
-      <workItem from="1537726210076" duration="20154000" />
+      <workItem from="1537726210076" duration="20899000" />
+      <workItem from="1537927881536" duration="4619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189669000" />
+    <option name="totallyTimeSpent" value="195033000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -589,13 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Componentes/Autenticados/Add.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Componentes/NoAutenticados/SignUp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1219">
@@ -679,46 +669,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Componentes/Autenticados/SeleccionarGaleria.js">
+    <entry file="file://$PROJECT_DIR$/Componentes/Autenticados/Publicacion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1541">
-          <caret line="67" column="44" lean-forward="true" selection-start-line="67" selection-end-line="68" />
+        <state relative-caret-position="30">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Store/CONSTANTES.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Store/ACCIONES.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="43" column="11" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Store/Store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Store/Sagas/Sagas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1310">
-          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#63#0" expanded="true" />
-            <element signature="n#!!block;n#sagaRegistro#0" />
-            <element signature="n#!!block;n#sagaLogin#0" />
-            <element signature="n#!!block;n#sagaSubirPublicacion#0" />
           </folding>
         </state>
       </provider>
@@ -733,10 +689,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Componentes/Autenticados/Publicacion.js">
+    <entry file="file://$PROJECT_DIR$/Componentes/Autenticados/Add.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/Sagas/Sagas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="102" column="72" selection-start-line="102" selection-start-column="72" selection-end-line="102" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+            <element signature="n#!!block;n#sagaRegistro#0" />
+            <element signature="n#!!block;n#sagaLogin#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/CONSTANTES.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/ACCIONES.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/Store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Componentes/Autenticados/SeleccionarGaleria.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="42" column="67" lean-forward="true" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

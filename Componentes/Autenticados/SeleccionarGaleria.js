@@ -1,10 +1,10 @@
 import React from 'react';
-import {StyleSheet, Text, View, Button} from 'react-native';
+import {StyleSheet, Text, View, Button,Alert} from 'react-native';
 import SeleccionarImagen from "../SeleccionarImagen";
 import {connect} from 'react-redux';
 import {
     actionCargarImagenPublicacion,
-    actionLimpiarImagenPublicacion,
+    actionLimpiarImagenPublicacion, actionLimpiarSubirPublicacion,
     actionSubirPublicacion
 } from "../../Store/ACCIONES";
 import {blur} from 'redux-form';
@@ -18,6 +18,36 @@ class SeleccionarGaleria extends React.Component {
     componentWillUnmount(){
         this.props.limpiarImagen();
     };
+    componentWillReceiveProps(nextProps){
+        if (this.props.estadoSubirPublicacion!==nextProps.estadoSubirPublicacion) {
+            switch (nextProps.estadoSubirPublicacion) {
+                case 'EXITO':
+                    Alert.alert('EXITO','La publicacion fue subida correctamente!',
+                        [
+                            {
+                                'text': 'OK',
+                                onPress: () => {
+                                    this.props.limpiarEstadoPublicacion();
+                                    this.props.navigation.goBack();
+                                }
+                            }
+                        ]);
+                    break;
+                case 'ERROR':
+                    Alert.alert('ERROR','Ocurrio un problema en la publicacion, intentelo de nuevo!',
+                        [
+                            {
+                                'text': 'CONFIRMAR',
+                                onPress: () => {
+                                    this.props.limpiarEstadoPublicacion();
+                                    this.props.navigation.goBack();
+                                }
+                            }
+                        ]);
+                    break;
+            }
+        }
+    }
     render() {
         return (
             <View style={styles.container}>
@@ -49,7 +79,8 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state) => ({
-    imagen: state.reducerImagenPublicacion
+    imagen: state.reducerImagenPublicacion,
+    estadoSubirPublicacion:state.reducerExitoSubirPublicacion.estado
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -62,6 +93,9 @@ const mapDispatchToProps = dispatch => ({
     },
     limpiarImagen:()=>{
         dispatch(actionLimpiarImagenPublicacion())
+    },
+    limpiarEstadoPublicacion:()=>{
+        dispatch(actionLimpiarSubirPublicacion())
     }
 });
 
